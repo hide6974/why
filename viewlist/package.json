@@ -1,30 +1,19 @@
 {
-  "name": "why",
+  "name": "viewlist",
   "version": "1.0.0",
+  "private": true,
   "description": "A Vue.js project",
   "author": "hide6974 <hide6974@gmail.com>",
-  "private": true,
   "scripts": {
+    "build": "node build/build.js",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "crypto-js": "^4.0.0",
-    "express": "^4.17.1",
-    "firebase": "^8.4.3",
-    "firebase-admin": "^9.7.0",
-    "firebase-functions": "^3.13.2",
-    "jquery": "^3.6.0",
-    "moment": "^2.29.1",
-    "vue": "^2.6.12",
-    "vue-axios": "^3.2.4",
-    "vue-clipboard2": "^0.3.1",
-    "vue-cookie": "^1.1.4",
-    "vue-meta": "^2.4.0",
-    "vue-moment": "^4.1.0",
-    "vue-nl2br": "^0.1.2"
+    "vue": "^2.5.2",
+    "vuetify": "^2.4.11"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -39,6 +28,7 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "eslint": "^7.25.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
@@ -51,25 +41,29 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-cli-plugin-vuetify": "~2.4.0",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
+    "vuetify-loader": "^1.7.0",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
 }
